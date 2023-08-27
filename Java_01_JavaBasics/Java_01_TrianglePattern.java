@@ -1,3 +1,4 @@
+package JavaDSA.Java_01_JavaBasics;
 public class Java_01_TrianglePattern {
     public static void print(int nRows, int nCols){
         for(int i=1; i<=nRows; i++){

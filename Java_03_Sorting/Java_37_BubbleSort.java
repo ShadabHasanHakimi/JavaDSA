@@ -1,3 +1,5 @@
+package JavaDSA.Java_03_Sorting;
+
 public class Java_37_BubbleSort {
     public static void bubbleSort(int[] a){
         int n=a.length;

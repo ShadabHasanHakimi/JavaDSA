@@ -1,24 +1,24 @@
 package JavaDSA;
 
 public class Practice {
-    public static void selectionSort(int []a){
-        int n = a.length;
-        for(int i=0; i<=n-1; i++){
-            int minPos=i;
-            for(int j=i+1; j<=n-1; j++){
-                if(a[j]<a[minPos]){
-                    minPos=j;
-                }
+    public static void insertionSort(int[] a){
+        for(int i=1; i<a.length; i++){
+            int curr = a[i];
+            int prev = i-1;
+//            this while loop will find the correct position for curr element
+            while(prev>=0 && a[prev]>curr){
+                a[prev+1]= a[prev];
+                prev--;
             }
-            int temp = a[minPos];
-            a[minPos]=a[i];
-            a[i]=temp;
+//            insertion of the curr element at correct position
+            a[prev+1] = curr;
         }
     }
+//    Time complexity of Insertion sort : O(n^2)
 
     public static void main(String[] args) {
         int[] arr={5,4,1,3,2};
-        selectionSort(arr);
+        insertionSort(arr);
         for(int e: arr){
             System.out.print(e);
         }
