@@ -1,3 +1,5 @@
+package JavaDSA.Java_02_Arrays;
+
 public class Java_26_LinearSearch {
     public static int linearSearch(int[] numbers, int key){
         for(int i=0; i<numbers.length; i++){

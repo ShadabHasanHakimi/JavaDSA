@@ -1,3 +1,5 @@
+package JavaDSA.Java_02_Arrays;
+
 public class Java_28_BinarySearch {
     public static int binarySearch(int[] a, int key){
         int start=0, end=a.length-1;
