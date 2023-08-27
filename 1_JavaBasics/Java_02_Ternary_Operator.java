@@ -1,5 +1,3 @@
-package JavaDSA;
-
 public class Java_02_Ternary_Operator {
     public static void main(String[] args) {
 //        To check greatest number
