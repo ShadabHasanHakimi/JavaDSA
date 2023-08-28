@@ -1,24 +1,25 @@
 package JavaDSA;
 
+import java.util.Arrays;
+
 public class Practice {
-    public static void insertionSort(int[] a){
-        for(int i=1; i<a.length; i++){
-            int curr = a[i];
-            int prev = i-1;
-//            this while loop will find the correct position for curr element
-            while(prev>=0 && a[prev]>curr){
-                a[prev+1]= a[prev];
-                prev--;
+    public static void countingSort(int [] a, int r){
+        int[] freq=new int[r+1];
+        Arrays.fill(freq,0);
+        for(int i=0; i<=r;i++){
+            for(int j=0; j<a.length; j++){
+                if(i==a[j]){
+                    freq[i]+=1;
+                }
             }
-//            insertion of the curr element at correct position
-            a[prev+1] = curr;
+            System.out.print(freq[i]);
         }
     }
-//    Time complexity of Insertion sort : O(n^2)
 
     public static void main(String[] args) {
-        int[] arr={5,4,1,3,2};
-        insertionSort(arr);
+        int [] arr={1,4,1,3,2,4,3,7};
+        countingSort(arr,7);
+        System.out.println();
         for(int e: arr){
             System.out.print(e);
         }
