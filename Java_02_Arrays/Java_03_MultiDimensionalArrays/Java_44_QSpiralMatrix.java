@@ -22,6 +22,9 @@ public class Java_44_QSpiralMatrix {
 
 //        bottom
             for (int i = endCol - 1; i >= startCol; i--) {
+//                due to while condition the last row where startRow
+//                will be equal to endRow will be repeated
+//                to overcome this condition we have used if condition
                 if(startRow==endRow){
                     break;
                 }
