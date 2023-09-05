@@ -1,4 +1,4 @@
-package JavaDSA.Java_05_Oops;
+package JavaDSA.Java_05_Oops.Java_01_Classes;
 
 public class Java_68_ClassesAndObjects {
 //    Objects: Entities in real world. Like pen, paper, animals, etc.

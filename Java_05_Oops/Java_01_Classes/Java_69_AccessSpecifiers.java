@@ -1,4 +1,4 @@
-package JavaDSA.Java_05_Oops;
+package JavaDSA.Java_05_Oops.Java_01_Classes;
 
 public class Java_69_AccessSpecifiers {
     public static void main(String[] args) {

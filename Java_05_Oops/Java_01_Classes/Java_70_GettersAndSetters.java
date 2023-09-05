@@ -1,4 +1,4 @@
-package JavaDSA.Java_05_Oops;
+package JavaDSA.Java_05_Oops.Java_01_Classes;
 
 public class Java_70_GettersAndSetters {
 //    getters and setters functions are used to access(obtain or change) the
