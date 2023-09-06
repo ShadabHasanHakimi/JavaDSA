@@ -1,4 +1,4 @@
-package JavaDSA.Java_05_Oops.Java_02_ConstructorsAndDestructors;
+package JavaDSA.Java_05_Oops.Java_02_Constructors;
 
 public class Java_73_ShallowAndDeepCopy {
     public static void main(String[] args) {
