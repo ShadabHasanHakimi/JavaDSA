@@ -10,7 +10,7 @@ public class Java_96_TilingProblem {
         int totWays = verArr+horArr;        //Total ways to place a tile on given 2*n
         return totWays;
     }
-//    Code will be dame for 4*n surface
+//    Code will be same for 4*n surface
 
     public static void main(String[] args) {
         System.out.println(tilingProblem(2));
