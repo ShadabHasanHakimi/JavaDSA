@@ -20,6 +20,54 @@ public class Java_100_RecusionQuestion {
 
 //    Question 2
 //    public static void question2(int num){
-//        String[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
+//        String[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+//        if(num==0){
+//            return;
+//        }
+//        int lastDigit = num%10;
+//        question2(num/10);
+//        System.out.print(digits[lastDigit]+" ");
 //    }
+//
+//    public static void main(String[] args) {
+//        question2(20);
+//    }
+
+
+//    Question 3
+
+//    public static int question3(String str){
+//        if(str.length()==0){
+//            return 0;
+//        }
+//        return question3(str.substring(1))+1;
+//    }
+//
+//    public static void main(String[] args) {
+//        System.out.println(question3("abcde"));
+//    }
+
+
+//    question 4
+    public static int question4(String str, int i, int j, int n){
+        if(n==1){
+            return 1;
+        }
+        if(n<=0){
+            return 0;
+        }
+        int res= question4(str,i+1, j, n-1)+
+                question4(str, i, j-1, n-1)-
+                question4(str, i+1, j-1, n-2);
+        if(str.charAt(i)==str.charAt(j)){
+            res++;
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        String str="abcab";
+        int i=0, n=str.length(), j=n-1;
+        System.out.println(question4(str, i, j, n));
+    }
 }
