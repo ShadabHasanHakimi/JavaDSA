@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_02_Methods;
+
 import java.util.Scanner;
 
 // We have to print all prime numbers from in given range

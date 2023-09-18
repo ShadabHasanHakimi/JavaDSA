@@ -1,4 +1,4 @@
-// Question 2
+package JavaDSA.Java_01_JavaBasics.Java_01_Loops;// Question 2
 import java.util.*;
 
 public class Java_05_Loops_Questions {

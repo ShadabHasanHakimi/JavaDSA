@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_02_Methods;
+
 import java.util.Scanner;
 
 public class Java_10_Binomial_Coeff_Method {

@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_03_AdvancedPatterns;
+
 public class Java_24_HollowRhombusPattern {
     public static void print(int nR, int nC){
         for(int i=1; i<=nR; i++){

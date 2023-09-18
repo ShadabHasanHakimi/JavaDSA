@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_03_AdvancedPatterns;
+
 public class Java_22_ButterflyPattern {
     public static void print(int nRows, int nCols){
         for(int i=1; i<=(nRows/2); i++){

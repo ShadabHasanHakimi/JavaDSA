@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_02_Methods;
+
 public class Java_16_DecToBin {
 
     public static int decToBin(int decNum){

@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_01_Loops;
+
 public class Java_02_Ternary_Operator {
     public static void main(String[] args) {
 //        To check greatest number

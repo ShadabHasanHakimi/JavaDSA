@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_01_Loops;
+
 import java.util.Scanner;
 
 public class Java_03_Conditionals_Questions {

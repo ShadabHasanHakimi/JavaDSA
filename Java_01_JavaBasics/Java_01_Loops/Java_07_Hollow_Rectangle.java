@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_01_Loops;
+
 public class Java_07_Hollow_Rectangle {
     public static void main(String[] args) {
         for(int i=0; i<4; i++){

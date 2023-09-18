@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_02_Methods;
+
 public class Java_14_binToDec {
     public static int binToDec(int binNum){
         int pow=0, ld, decNum=0;

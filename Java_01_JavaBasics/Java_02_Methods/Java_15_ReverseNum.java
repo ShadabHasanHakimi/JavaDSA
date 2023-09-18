@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_02_Methods;
+
 public class Java_15_ReverseNum {
     public static int reverse(int num){
         int rev=0, ld;

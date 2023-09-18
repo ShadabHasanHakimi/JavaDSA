@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_03_AdvancedPatterns;
+
 public class Java_18_InvertedAndRotatedHalfPyramid {
     public static void print(int nRows, int nCols){
         for(int i=1; i<=nRows; i++){

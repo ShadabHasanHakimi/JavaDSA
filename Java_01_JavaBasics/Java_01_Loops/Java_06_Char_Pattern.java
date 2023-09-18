@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_01_Loops;
+
 public class Java_06_Char_Pattern {
     public static void main(String[] args) {
         char s = 'A';

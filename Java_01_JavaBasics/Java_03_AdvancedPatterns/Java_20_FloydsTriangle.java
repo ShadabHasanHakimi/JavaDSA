@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_03_AdvancedPatterns;
+
 public class Java_20_FloydsTriangle {
     public static void print(int nRows, int nCols){
         int n=1;

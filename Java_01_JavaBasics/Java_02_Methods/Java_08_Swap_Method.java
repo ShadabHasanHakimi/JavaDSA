@@ -1,3 +1,5 @@
+package JavaDSA.Java_01_JavaBasics.Java_02_Methods;
+
 public class Java_08_Swap_Method {
     public static void swap(int a, int b){
         int temp;
