@@ -1,4 +1,4 @@
-package JavaDSA.Java_03_Sorting;
+package JavaDSA.Java_02_Arrays.Java_02_SortingInArrays;
 
 public class Java_41_CountingSort {
     public static void countingSort(int[] a){
@@ -25,6 +25,8 @@ public class Java_41_CountingSort {
             }
         }
     }
+//    TC : O(n+k) where n is the number of elements and k is the range
+//    if the range of elements is small then counting sort is best
 
     public static void main(String[] args) {
         int [] arr={2,1,5,2,1,4,6,4,7,3,9,7,9,5};

@@ -1,4 +1,4 @@
-package JavaDSA.Java_03_Sorting;
+package JavaDSA.Java_02_Arrays.Java_02_SortingInArrays;
 
 public class Java_39_SelectionSort {
     public static void selectionSort(int[] a){
