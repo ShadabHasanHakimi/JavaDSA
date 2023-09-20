@@ -19,6 +19,8 @@ public class Java_106_BackTrackingInArrays {
 //        Backtracking step
         arr[i]=arr[i]-2;    //Decreasing the value of arr after calling recursive function
     }
+//    Steps : 2n
+//    TC: O(2n) or O(n)
     public static void main(String[] args) {
         int[] arr= new int[5];
         changeArr(arr, 0, 1);
