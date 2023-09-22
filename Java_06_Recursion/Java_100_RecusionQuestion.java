@@ -70,4 +70,29 @@ public class Java_100_RecusionQuestion {
 //        int i=0, n=str.length(), j=n-1;
 //        System.out.println(question4(str, i, j, n));
 //    }
+
+
+//    Tower Of Hanoi Puzzle
+//    Question 5
+
+//    Rules:
+//    1. Only one disk transferred in one step
+//    2. Smaller disks are always kept on top of larger disks
+    public static void towerOfHanoi(int disks, String src, String helper, String dest){
+//        Base condition : if number of disks becomes to zero, then transfer the last disk to destination
+        if(disks==1){
+            System.out.println("Disk "+disks+" transferred from "+src+" to "+dest);
+            return;
+        }
+//        dest->helper and helper->destination
+        towerOfHanoi(disks-1, src, dest, helper);
+        System.out.println("Disk "+disks+" transferred from "+src+" to "+dest);
+//        src->helper and helper->dest and dest->src
+        towerOfHanoi(disks-1, helper, dest, src);
+    }
+
+    public static void main(String[] args) {
+        int d=3;
+        towerOfHanoi(d, "S", "H", "D");
+    }
 }
