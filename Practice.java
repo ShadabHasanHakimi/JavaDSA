@@ -1,5 +1,7 @@
 package JavaDSA;
 
-public class Practice {
 
+import java.util.ArrayList;
+
+public class Practice {
 }

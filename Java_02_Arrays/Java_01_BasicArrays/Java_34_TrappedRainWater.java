@@ -1,3 +1,5 @@
+package JavaDSA.Java_02_Arrays.Java_01_BasicArrays;
+
 public class Java_34_TrappedRainWater {
     public static void trappedRainWater(int[] h){
         //Time complexity will depend on the number
