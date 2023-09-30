@@ -42,6 +42,6 @@ public class Java_121_PairSum2 {
 
         int target = 16;
 
-        pairSum2(list, 16);
+        System.out.println(pairSum2(list, 16));
     }
 }
