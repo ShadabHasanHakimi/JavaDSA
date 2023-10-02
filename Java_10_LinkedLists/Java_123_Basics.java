@@ -1,6 +1,6 @@
 package JavaDSA.Java_10_LinkedLists;
 
-public class Java_122_Basics {
+public class Java_123_Basics {
 //    Creation of node
     public static class Node{
         int data;
