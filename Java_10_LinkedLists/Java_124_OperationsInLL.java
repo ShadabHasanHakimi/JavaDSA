@@ -13,6 +13,7 @@ public class Java_124_OperationsInLL {
     public static Node tail;
 //    For counting the size of LL
     public static int count;
+
 //    Adding at first Position
     public void addFirst(int data){
 //        Step1 : create new node
@@ -102,8 +103,8 @@ public class Java_124_OperationsInLL {
             System.out.println("LL is already empty!!!");
             return Integer.MIN_VALUE;
         }else if(head == tail){
-            head = tail = null;
             int val = tail.data;
+            head = tail = null;
             count=0;
             return val;
         }
@@ -119,6 +120,7 @@ public class Java_124_OperationsInLL {
         return val;
     }
 
+//    Searching a key using iterative approach and returning its node position
     public int search(int key){
         if(count == 0){
             System.out.println("LL is empty!!!");
@@ -136,6 +138,8 @@ public class Java_124_OperationsInLL {
         return -1;
     }
 
+//    Searching a key in a linked list and returning its node position
+//    Using recursive approach
     public int helper(Node temp, int key){
         if(temp==null){
             return -1;
@@ -155,6 +159,62 @@ public class Java_124_OperationsInLL {
         return helper(head, key);
     }
 
+//    Reversing a linked list
+    public void reverse(){
+        if(head == null){
+            System.out.println("LL is empty!!!");
+            return;
+        }
+        Node curr = tail = head;
+        Node prev = null;
+        Node next;
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+//        After loop curr becomes null but prev will point the last node
+        head = prev;
+    }
+
+//    Find and remove Nth node from end
+//    using iterative approach
+    public void delete(int n){
+        if(head == null){
+            System.out.println("LL is already empty!!!");
+            return;
+        }
+        if(head == tail){
+            head = tail = null;
+            return;
+        }
+        int size =0;
+        Node temp =head;
+        while(temp!= null){
+            temp=temp.next;
+            size++;
+        }
+
+        if(n==size){        // If we want to delete first element
+            head = head.next;
+            count--;
+            return;
+        }
+
+        Node prev=head;
+        int i=1;
+        while(i!=size-n){
+            prev = prev.next;
+            i++;
+        }
+
+        prev.next = prev.next.next;
+        count--;
+    }
+
+
+
     public static void main(String[] args) {
         Java_124_OperationsInLL ll = new Java_124_OperationsInLL();
 
@@ -165,16 +225,21 @@ public class Java_124_OperationsInLL {
 
         ll.add(2,6);
 
-        ll.removeFirst();
+//        ll.removeFirst();
 
-        ll.removeLast();
+//        ll.removeLast();
 
         ll.print();
 
         System.out.println(count);
 
-        System.out.println("Key found at "+ll.search(5+1));
+//        System.out.println("Key found at "+ll.search(5+1));
 
-        System.out.println(ll.recSearch(3));
+//        System.out.println(ll.recSearch(3));
+//        ll.reverse();
+//        ll.print();
+
+        ll.delete(5);
+        ll.print();
     }
 }

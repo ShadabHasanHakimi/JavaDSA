@@ -2,31 +2,32 @@ package JavaDSA.Java_09_ArrayLists.Java_02_ArrayListQuestions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Java_122_ArrayListQuestions {
-    public static ArrayList<Integer> isLonely(ArrayList<Integer> nums){
-        int curr;
-        ArrayList<Integer> ans = new ArrayList<>();
-        for(int i=0; i<nums.size(); i++){
-            curr = nums.get(i);
-            int j=0;
-            while(j<nums.size()){
-                if(j==i){
-                    j++;
-                }
-                else if(nums.get(j)==curr+1 || nums.get(j)==curr-1 || nums.get(j) == curr){
-                    break;
-                }
-                else{
-                    j++;
-                }
-            }
-            if(j == nums.size()-1){
-                ans.add(curr);
+    public static ArrayList<Integer> findLonely(ArrayList<Integer> nums) {
+        Collections.sort(nums);
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i=1; i < nums.size()-1; i++) {
+            if (nums.get(i-1) + 1 < nums.get(i) && nums.get(i) + 1 < nums.get(i+1))
+            {
+                list.add(nums.get(i));
             }
         }
-        return ans;
+        if (nums.size() == 1) {
+            list.add(nums.get(0));
+        }
+        if (nums.size() > 1) {
+            if (nums.get(0) + 1 < nums.get(1)) {
+                list.add(nums.get(0));
+            }
+            if (nums.get(nums.size()-2) + 1 < nums.get(nums.size()-1)) {
+                list.add(nums.get(nums.size()-1));
+            }
+        }
+        return list;
     }
+
 
     public static void main(String[] args) {
         ArrayList<Integer> nums = new ArrayList<>();
@@ -35,6 +36,6 @@ public class Java_122_ArrayListQuestions {
         nums.add(5);
         nums.add(3);
 
-        System.out.println(isLonely(nums));
+        System.out.println(findLonely(nums));
     }
 }
