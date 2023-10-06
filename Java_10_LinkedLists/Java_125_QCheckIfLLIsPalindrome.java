@@ -31,29 +31,6 @@ public class Java_125_QCheckIfLLIsPalindrome {
         return slow;
     }
 
-//    public void reverse(Node curr){
-//        Node prev = null;
-//        Node next = curr.next;
-//        while(curr == tail){
-//            curr.next = prev;
-//            prev = curr;
-//            curr = next;
-//            next = next.next;
-//        }
-//    }
-//
-//    public boolean compare(){
-//        Node first=head, last=tail;
-//        while(last != null){
-//            if(first.data!=last.data){
-//                return false;
-//            }
-//            first = first.next;
-//            last = last.next;
-//        }
-//        return true;
-//    }
-
     public boolean isPalindrome(){
 //        Base condition
         if(head == null || head.next==null){
