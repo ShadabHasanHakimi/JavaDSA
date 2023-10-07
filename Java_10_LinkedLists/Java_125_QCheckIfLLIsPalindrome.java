@@ -47,7 +47,7 @@ public class Java_125_QCheckIfLLIsPalindrome {
             curr = next;
         }
 
-        Node right = prev;      // right half head because curr in null
+        Node right = prev;      // prev is right half head because curr in null
         Node left = head;
 
         // step 3 : check left and right half
