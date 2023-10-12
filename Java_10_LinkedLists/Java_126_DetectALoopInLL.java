@@ -39,7 +39,7 @@ public class Java_126_DetectALoopInLL {
             fast = fast.next.next;
             if(fast == slow){
                 cycle = true;
-                return;
+                break;
             }
         }
         if(cycle == false){
@@ -57,7 +57,6 @@ public class Java_126_DetectALoopInLL {
 
 //        Remove cycle
         prev.next = null;
-        System.out.println("Done");
     }
 
     public static void main(String[] args) {
