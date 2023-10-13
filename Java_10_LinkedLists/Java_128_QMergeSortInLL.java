@@ -1,6 +1,6 @@
 package JavaDSA.Java_10_LinkedLists;
-import java.util.LinkedList;
-public class Java_128_MergeSortInLL {
+
+public class Java_128_QMergeSortInLL {
     public static class Node{
         int data;
         Node next;
@@ -247,7 +247,7 @@ public class Java_128_MergeSortInLL {
     }
 
     public static void main(String[] args) {
-        Java_128_MergeSortInLL LL = new Java_128_MergeSortInLL();
+        Java_128_QMergeSortInLL LL = new Java_128_QMergeSortInLL();
         LL.addFirst(1);
         LL.addLast(4);
         LL.addFirst(6);
