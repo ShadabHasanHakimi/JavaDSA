@@ -149,6 +149,88 @@ public class Java_131_LLQuestions {
 
     }
 
+//    Question 3
+    public void swap(int x, int y){
+        if(x==y)
+            return;
+
+//        if there is 0 or 1 nodes in the ll
+        if(head == null || head.next == null){
+            return;
+        }
+
+        Node prev1, curr1, prev2, curr2, temp;
+        prev1 = curr1 = prev2 = curr2 = head;
+
+//        if we have to swap head
+        if(head.data == x || head.data == y){
+            while(prev2.next.data != y){
+                prev2 = prev2.next;
+                if(prev2.next == null){
+                    return;
+                }
+            }
+            curr2 = prev2.next;
+
+            temp = curr2.next;
+
+            curr2.next = curr1.next;
+            prev2.next = curr1;
+            curr1.next = temp;
+            head = curr2;
+            return;
+        }
+        while(prev1.next.data != x){
+            prev1 = prev1.next;
+            if(prev1.next == null){
+                return;
+            }
+        }
+        curr1 = prev1.next;
+
+        while(prev2.next.data != y){
+            prev2 = prev2.next;
+            if(prev2.next == null){
+                return;
+            }
+        }
+        curr2 = prev2.next;
+
+        temp = curr1.next;
+
+        prev1.next = prev2.next;
+        curr1.next = curr2.next;
+        prev2.next = curr1;
+        curr2.next = temp;
+    }
+
+    public void swapNodes(int x, int y){
+        if (x == y)
+            return;
+        Node prevX = null, currX = head;
+        while (currX != null && currX.data != x) {
+            prevX = currX;
+            currX = currX.next;
+        }
+        Node prevY = null, currY = head;
+        while (currY != null && currY.data != y) {
+            prevY = currY;
+            currY = currY.next;
+        }
+        if (currX == null || currY == null)
+            return;
+        if (prevX != null)
+            prevX.next = currY;
+        else
+            head = currY;
+        if (prevY != null)
+            prevY.next = currX;
+        else
+            head = currX;
+        Node temp = currX.next;
+        currX.next = currY.next;
+        currY.next = temp;
+    }
     public static void main (String[]args){
 //        Java_131_LLQuestions list = new Java_131_LLQuestions();
 //        Node head1, head2;
@@ -186,7 +268,8 @@ public class Java_131_LLQuestions {
         ll.addLast(10);
 
         ll.print();
-        ll.deleteNAfterM(3,2);
+//        ll.deleteNAfterM(3,2);
+        ll.swapNodes(1,2);
         ll.print();
     }
 }
