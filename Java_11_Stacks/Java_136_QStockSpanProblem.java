@@ -2,7 +2,7 @@ package JavaDSA.Java_11_Stacks;
 
 import java.util.Stack;
 
-public class Java_136_StockSpanProblem {
+public class Java_136_QStockSpanProblem {
     public static void stockSpan(int[] stocks, int[] span){
         Stack<Integer> s = new Stack<>();
         span[0] = 1;
