@@ -4,30 +4,29 @@ package JavaDSA;
 import java.util.Stack;
 
 public class Practice {
-    public static void stocksSpan(int[]stocks, int[] span){
+    public static int[] nextG(int[] elements){
+        int[] nextG = new int[elements.length];
         Stack<Integer> s = new Stack<>();
-        span[0] = 1;
-        s.push(0);
-        for(int i=1; i<stocks.length; i++){
-            while(stocks[i]>stocks[s.peek()] && !s.isEmpty()){
+        s.push(elements.length-1);
+        for(int i = elements.length-1; i>=0; i--){
+            while(!s.isEmpty() && elements[s.peek()]>=elements[i]){
                 s.pop();
             }
             if(s.isEmpty()){
-                span[i] = i+1;
+                nextG[i] = -1;
             }
-            else {
-                int prevHigh = s.peek();
-                span[i] = i - prevHigh;
-            }
+            else
+                nextG[i] = elements[s.peek()];
             s.push(i);
         }
+        return nextG;
     }
     public static void main(String[] args) {
-        int[] stocks = {100, 80, 60, 70, 60, 85, 100};
-        int[] span = new int[stocks.length];
-        stocksSpan(stocks, span);
-        for(int i=0; i<span.length; i++){
-            System.out.println(span[i]);
+        int[] elements = {6,8,0,1,3};
+        int[] nextGreater = new int[elements.length];
+        nextGreater = nextG(elements);
+        for (int j : nextGreater) {
+            System.out.print(j+" ");
         }
     }
 }

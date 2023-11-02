@@ -4,25 +4,22 @@ import java.util.Stack;
 
 public class Java_137_QNextGreaterElement {
     public static int[] nextGreater(int[] elements){
-        int[] nextGreater = new int[elements.length];
-        Stack<Integer> stack = new Stack<>();
-        int i=elements.length-1;
-        while(i>0){
-            int j=elements.length-1;
-            while(stack.isEmpty() && stack.peek()<=elements[j]){
-                stack.pop();
-                j--;
+        int[] nextG = new int[elements.length];
+        Stack<Integer> s = new Stack<>();
+        s.push(elements.length-1);
+        for(int i=elements.length-1; i>=0; i--){
+            while(!s.isEmpty() && elements[s.peek()] <= elements[i]){
+                s.pop();
             }
-            if(stack.isEmpty()){
-                nextGreater[i]=-1;
+            if(s.isEmpty()){
+                nextG[i]=-1;
             }
             else{
-                nextGreater[i]=elements[stack.peek()];
-                stack.push(i);
+                nextG[i] = elements[s.peek()];
             }
-            i--;
+            s.push(i);
         }
-        return nextGreater;
+        return nextG;
     }
 
     public static void main(String[] args) {
@@ -30,7 +27,7 @@ public class Java_137_QNextGreaterElement {
         int[] nextGreater = new int[elements.length];
         nextGreater = nextGreater(elements);
         for (int j : nextGreater) {
-            System.out.println(j);
+            System.out.print(j+" ");
         }
     }
 }
