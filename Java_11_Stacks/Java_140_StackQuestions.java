@@ -46,14 +46,6 @@ public class Java_140_StackQuestions {
         return s.isEmpty();
     }
 
-//    Question 3
-    public static String decodeString(String input){
-        Stack<Integer> i = new Stack<>();
-        Stack<String> s = new Stack<>();
-        for(int j=0; j<input.length(); j++){
-
-        }
-    }
 
     public static void main(String[] args) {
         LinkedList<Character> l = new LinkedList<>();
