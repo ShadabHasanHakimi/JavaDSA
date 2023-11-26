@@ -1,4 +1,4 @@
-package JavaDSA.Java_12_Queue;
+package JavaDSA.Java_12_Queue.Java_01_Queue;
 
 public class Java_141_QueueBasics {
 //    Implementation of Queue using Arrays

@@ -1,4 +1,4 @@
-package JavaDSA.Java_12_Queue;
+package JavaDSA.Java_12_Queue.Java_01_Queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
